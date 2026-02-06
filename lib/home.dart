@@ -30,10 +30,17 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Fooderlich',
           style: Theme.of(context).textTheme.titleLarge,
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.access_time),
+            onPressed: () {},
+          )
+        ],
       ),
       body: pages[_selectedIndex], // แสดงหน้าตาม Index ที่เลือก
       bottomNavigationBar: BottomNavigationBar(
